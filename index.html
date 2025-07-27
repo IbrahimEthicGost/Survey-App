@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📊 Quick Survey</h1>
+      <button id="toggle-theme">🌙</button>
+    </div>
+
+    <form id="survey-form">
+      <div class="question">
+        <p>1. Which frontend framework do you prefer?</p>
+        <label><input type="radio" name="q1" value="React" required /> React</label>
+        <label><input type="radio" name="q1" value="Vue" /> Vue</label>
+        <label><input type="radio" name="q1" value="Angular" /> Angular</label>
+        <label><input type="radio" name="q1" value="Svelte" /> Svelte</label>
+      </div>
+
+      <div class="question">
+        <p>2. How many years of coding experience do you have?</p>
+        <label><input type="radio" name="q2" value="0-1" required /> 0–1</label>
+        <label><input type="radio" name="q2" value="2-3" /> 2–3</label>
+        <label><input type="radio" name="q2" value="4-5" /> 4–5</label>
+        <label><input type="radio" name="q2" value="6+" /> 6+</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="results" class="hidden">
+      <h2>📈 Results</h2>
+      <div id="results-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
